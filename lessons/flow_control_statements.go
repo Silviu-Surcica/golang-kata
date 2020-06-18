@@ -1,5 +1,5 @@
 package lessons
-
+import "fmt"
 
 func sum(a int) int {
     sum := 0
@@ -24,6 +24,46 @@ func sum(a int) int {
         }
     }
     return sum
+}
+
+/*
+Switch statement is like in C but it doesnt run all the cases until it reaches break.
+Break is by default at the end of each case.
+In essence the switch can be used as a if elif else
+Cases are evaluated in order from top to bottom, stopping when a case succeeds.
+Case values can be anything but constants.
+The switch without a condition can be a clean way to write if then else chains:
+switch {
+	case t.Hour() < 12:
+		fmt.Println("Good morning!")
+	case t.Hour() < 17:
+		fmt.Println("Good afternoon.")
+	default:
+		fmt.Println("Good evening.")
+	}
+*/
+func SelectOption(a int) {
+    switch a {
+    case 0:
+        fmt.Println("Selected value is 0")
+    case 1:
+        fmt.Println("Selected value is 1")
+    default:
+        fmt.Println("Neither 0 or 1")
+    }
+}
+
+/*
+The defer statement will push the function call into a stack, executing the function
+in a LIFO style after the surrounding function has returned.
+*/
+func DeferCount(a int) {
+    fmt.Println("Start")
+    for i := 0; i < 10; i++ {
+		defer fmt.Println(i)
+	}
+	fmt.Println("Done")
+	// this will print Start Done 9 8 7 6 5 4 3 2 1 0
 }
 
 /* ==========EXERCISE=============
