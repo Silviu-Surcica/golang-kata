@@ -3,7 +3,7 @@ Packages
 Every Go program is made up of packages.
 Programs start running in package main.
 */
-package lesson
+package lessons
 
 /* Grouping the imports into a parenthesized, "factored" import statement.
 You can also write multiple import statements, like:
