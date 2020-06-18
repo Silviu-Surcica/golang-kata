@@ -32,3 +32,22 @@ You need to implement the power math function.
 The first parameter is the base and the second is the exponential power.
 The function should return a float64 as a result.
 */
+func Pow(a int, b int) float64 {
+    p := 1.0
+    if a == 1 || b == 0{
+        return 1
+    }
+    if a == 0 {
+        return 0
+    }
+    if b > 0 {
+        for i:=1; i<b+1;i++ {
+            p *= float64(a)
+        }
+    } else{
+        for i := b; i<0; i ++{
+                p /= float64(a)
+        }
+    }
+    return p
+}
