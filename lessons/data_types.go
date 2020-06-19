@@ -99,12 +99,10 @@ func Maps(){
 
 /* ===========EXERCISE1===========
 Implement the function VowelOrConsonant
-It takes one argument which is a string and returns a map
+It takes one argument which is a string containing letters and returns a map
 with a string key and a slice of strings as its value.
 The map will have 2 keys.
 "Vowels": ["a", "e"]
 "Consonants": ["c", "z"]
 The slices will be populated with the found vowels and consonants from the input string.
 */
-
-
