@@ -7,44 +7,19 @@ import (
 )
 
 var _ = Describe("DataTypes", func() {
-    It("Test 'there was'", func() {
-    Expect(lessons.WordLength("there was")).To(Equal(map[string]int{
-                                                         "there": 5,
-                                                         "was": 3,
-                                                         },
-    ))
+    It("Test 12", func() {
+    Expect(lessons.DigitalRoot(12)).To(Equal(3))
   })
-  It("Test 'I am.'", func() {
-    Expect(lessons.WordLength("I am.")).To(Equal(map[string]int{
-                                                         "I": 1,
-                                                         "am.": 3,
-                                                         },
-    ))
+  It("Test 195", func() {
+    Expect(lessons.DigitalRoot(195)).To(Equal(6))
   })
-  It("Test 'Us all, are we.'", func() {
-    Expect(lessons.WordLength("Us all, are we.")).To(Equal(map[string]int{
-                                                         "Us": 2,
-                                                         "all,": 4,
-                                                         "are": 3,
-                                                         "we.": 3,
-                                                         },
-    ))
+  It("Test 993", func() {
+    Expect(lessons.DigitalRoot(993)).To(Equal(3))
   })
-  It("Test empty", func() {
-    Expect(lessons.WordLength("")).To(Equal(map[string]int{
-
-                                                         },
-    ))
-  })
-  It("Test signs '! , . 0 @ #'", func() {
-    Expect(lessons.WordLength("! , . 0 @ #")).To(Equal(map[string]int{
-                                                         "!": 1,
-                                                         ",": 1,
-                                                         ".": 1,
-                                                         "0": 1,
-                                                         "@": 1,
-                                                         "#": 1,
-                                                         },
-    ))
-  })
+    It("Test 167346", func() {
+        Expect(lessons.DigitalRoot(167346)).To(Equal(9))
+      })
+      It("Test 0", func() {
+        Expect(lessons.DigitalRoot(0)).To(Equal(0))
+      })
 })
