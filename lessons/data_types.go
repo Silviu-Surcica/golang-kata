@@ -98,12 +98,20 @@ func Maps(){
 }
 
 /* ===========EXERCISE===========
-Implement the function WordLength
-It takes a string and returns a map
-with a string key and int as its value.
-This function will iterate over each word and will count its letters.
-Helper function: https://golang.org/pkg/strings/#Fields
+Implement the function DigitalRoot
+It takes an int and returns an int.
+Given n, take the sum of the digits of n.
+If that value has more than one digit,
+continue reducing in this way until a single-digit number is produced.
+This is only applicable to the natural numbers.
+
+Helper function:
+s := strconv.Itoa(20) // "20"
+i, err := strconv.Atoi("20") // 20
+
 Ex:
-WorldLength("A world full of dreamers")
-{"A": 1, "world": 5, "full": 4, "of": 2, "dreamers": 8}
+ 16  -->  1 + 6 = 7
+   942  -->  9 + 4 + 2 = 15  -->  1 + 5 = 6
+132189  -->  1 + 3 + 2 + 1 + 8 + 9 = 24  -->  2 + 4 = 6
+493193  -->  4 + 9 + 3 + 1 + 9 + 3 = 29  -->  2 + 9 = 11  -->  1 + 1 = 2
 */
