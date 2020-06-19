@@ -1,7 +1,6 @@
 package lessons
 
 import "fmt"
-import "strings"
 
 // Pointers in Go work exactly as in C but Go has no pointer arithmetic
 func Pointers(){
