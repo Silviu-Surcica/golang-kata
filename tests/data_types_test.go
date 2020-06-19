@@ -7,52 +7,43 @@ import (
 )
 
 var _ = Describe("DataTypes", func() {
-    It("Test abc", func() {
-    Expect(lessons.VowelOrConsonant("abc")).To(Equal(map[string][]string{
-                                                         "Vowels": {"a"},
-                                                         "Consonants": {"b", "c"},
+    It("Test 'there was'", func() {
+    Expect(lessons.WordLength("there was")).To(Equal(map[string]int{
+                                                         "there": 5,
+                                                         "was": 3,
                                                          },
     ))
   })
-  It("Test aeo", func() {
-    Expect(lessons.VowelOrConsonant("aeo")).To(Equal(map[string][]string{
-                                                         "Vowels": {"a", "e", "o"},
-                                                         "Consonants": {},
+  It("Test 'I am.'", func() {
+    Expect(lessons.WordLength("I am.")).To(Equal(map[string]int{
+                                                         "I": 1,
+                                                         "am.": 3,
                                                          },
     ))
   })
-  It("Test aaaa", func() {
-    Expect(lessons.VowelOrConsonant("aaaa")).To(Equal(map[string][]string{
-                                                         "Vowels": {"a", "a", "a", "a"},
-                                                         "Consonants": {},
-                                                         },
-    ))
-  })
-  It("Test a", func() {
-    Expect(lessons.VowelOrConsonant("a")).To(Equal(map[string][]string{
-                                                         "Vowels": {"a"},
-                                                         "Consonants": {},
-                                                         },
-    ))
-  })
-  It("Test aeiou", func() {
-    Expect(lessons.VowelOrConsonant("aeiou")).To(Equal(map[string][]string{
-                                                         "Vowels": {"a", "e", "i", "o", "u"},
-                                                         "Consonants": {},
-                                                         },
-    ))
-  })
-  It("Test c", func() {
-    Expect(lessons.VowelOrConsonant("c")).To(Equal(map[string][]string{
-                                                         "Vowels": {},
-                                                         "Consonants": {"c"},
+  It("Test 'Us all, are we.'", func() {
+    Expect(lessons.WordLength("Us all, are we.")).To(Equal(map[string]int{
+                                                         "Us": 2,
+                                                         "all,": 4,
+                                                         "are": 3,
+                                                         "we.": 3,
                                                          },
     ))
   })
   It("Test empty", func() {
-    Expect(lessons.VowelOrConsonant("")).To(Equal(map[string][]string{
-                                                         "Vowels": {},
-                                                         "Consonants": {},
+    Expect(lessons.WordLength("")).To(Equal(map[string]int{
+
+                                                         },
+    ))
+  })
+  It("Test signs '! , . 0 @ #'", func() {
+    Expect(lessons.WordLength("! , . 0 @ #")).To(Equal(map[string]int{
+                                                         "!": 1,
+                                                         ",": 1,
+                                                         ".": 1,
+                                                         "0": 1,
+                                                         "@": 1,
+                                                         "#": 1,
                                                          },
     ))
   })

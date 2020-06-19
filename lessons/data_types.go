@@ -1,6 +1,7 @@
 package lessons
 
 import "fmt"
+import "strings"
 
 // Pointers in Go work exactly as in C but Go has no pointer arithmetic
 func Pointers(){
@@ -97,12 +98,13 @@ func Maps(){
     }
 }
 
-/* ===========EXERCISE1===========
-Implement the function VowelOrConsonant
-It takes one argument which is a string containing letters and returns a map
-with a string key and a slice of strings as its value.
-The map will have 2 keys.
-"Vowels": ["a", "e"]
-"Consonants": ["c", "z"]
-The slices will be populated with the found vowels and consonants from the input string.
+/* ===========EXERCISE===========
+Implement the function WordLength
+It takes a string and returns a map
+with a string key and int as its value.
+This function will iterate over each word and will count its letters.
+Helper function: https://golang.org/pkg/strings/#Fields
+Ex:
+WorldLength("A world full of dreamers")
+{"A": 1, "world": 5, "full": 4, "of": 2, "dreamers": 8}
 */
