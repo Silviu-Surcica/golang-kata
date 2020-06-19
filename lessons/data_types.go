@@ -106,3 +106,19 @@ The map will have 2 keys.
 "Consonants": ["c", "z"]
 The slices will be populated with the found vowels and consonants from the input string.
 */
+
+func VowelOrConsonant(s string) map[string][]string {
+    result := map[string][]string{
+        "Vowels": []string{},
+        "Consonants": []string{},
+    }
+    for _, character := range s {
+        switch character {
+             case 'a', 'e', 'i', 'o', 'u':
+                result["Vowels"] = append(result["Vowels"], string(character))
+             default:
+                result["Consonants"] = append(result["Consonants"], string(character))
+        }
+    }
+    return result
+}
