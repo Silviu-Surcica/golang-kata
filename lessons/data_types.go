@@ -108,3 +108,12 @@ Ex:
 WorldLength("A world full of dreamers")
 {"A": 1, "world": 5, "full": 4, "of": 2, "dreamers": 8}
 */
+
+func WordLength(s string) map[string]int {
+    result := make(map[string]int)
+    words := strings.Fields(s)
+    for _, word := range words {
+        result[word] = len(word)
+    }
+    return result
+}
