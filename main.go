@@ -6,5 +6,5 @@ import (
 
 
 func main() {
-	fmt.Println("My favorite number is", float32(4))
+	fmt.Println("Hello World!")
 }

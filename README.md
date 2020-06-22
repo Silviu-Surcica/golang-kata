@@ -38,3 +38,8 @@ Those trends are:
 * Most radically, there is no type hierarchy: types just are, they don't have to announce their relationships 
 For more info GO read [FAQs](https://golang.org/doc/faq)
 
+## Install Go
+Follow the [installation](https://golang.org/doc/install) procedure specific to each OS.
+Test the installation by running:
+`go run main.go`
+
