@@ -40,6 +40,9 @@ For more info GO read [FAQs](https://golang.org/doc/faq)
 
 ## Install Go
 Follow the [installation](https://golang.org/doc/install) procedure specific to each OS.
-Test the installation by running:
-`go run main.go`
+### Test the installation by running:
+```go run main.go```
+### Install [ginkgo](https://onsi.github.io/ginkgo/) testing framework:
+* `$ go get github.com/onsi/ginkgo/ginkgo`
+* `$ go get github.com/onsi/gomega/...`
 
